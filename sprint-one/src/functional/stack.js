@@ -2,8 +2,8 @@ var Stack = function() {
   var someInstance = {};
 
   // Use an object with numeric keys to store values
-  storage = {};
-  nextKey = 0;
+  var storage = {};
+  var nextKey = 0;
 
   // Implement the methods below
   someInstance.push = function(value) {
