@@ -5,8 +5,6 @@ var Stack = function() {
   myInstance.storage = {};
   myInstance.nextKey = 0;
 
-  // _.extend(myInstance, stackMethods);
-
   return myInstance;
 };
 
