@@ -17,9 +17,7 @@ var queueMethods = {
     var removed = this.storage[this.firstKey];
     if (removed) {
       delete this.storage[this.firstKey];
-
       this.firstKey++;
-      // }
       return removed;
     }
     return 'no values left';
