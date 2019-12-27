@@ -3,7 +3,6 @@ var LinkedList = function() {
   list.head = null;
   list.tail = null;
 
-
   list.addToTail = function(value) {
     var node = Node(value);
     if (this.head === null) {
@@ -36,7 +35,6 @@ var LinkedList = function() {
     }
 
     return false;
-
   };
 
   return list;

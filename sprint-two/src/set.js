@@ -1,6 +1,6 @@
 var Set = function() {
   var set = Object.create(setPrototype);
-  set._storage = []; // creates an empty array for storage of items
+  set._storage = [];
   return set;
 };
 
@@ -32,9 +32,9 @@ setPrototype.remove = function(item) {
 
 Since in all three cases, the function uses indexOf() - what's happening
 under the hood is that it's using a for loop to iterate over the list and touch
-all of the elements, the time complexity of all three methods is O(n) aka LINEAR.
-If we had a reference to the location of the item going in, it would have constant
-time complexity, but since we don't know where in the list the items are, we have
-to touch all of the elements to see if it already exists or not.
+all of the elements. The time complexity of all three methods is O(n); aka LINEAR.
+If we had a reference to the location of the item we wanted to locate, it would have constant
+time complexity, or O(1); but since we don't know where in the list the items are, we potentially have
+to touch all of the elements to find it.
 
  */
