@@ -3,9 +3,7 @@
 
 // Instantiate a new graph
 var Graph = function() {
-
   this.graph = {};
-
 };
 
 // Add a node to the graph, passing in the node's value.
@@ -56,6 +54,13 @@ Graph.prototype.removeEdge = function(fromNode, toNode) {
   if (this.hasEdge(fromNode, toNode)) {
     delete this.graph[toNode].edges[fromNode];
     delete this.graph[fromNode].edges[toNode];
+  }
+  // updated function to pass new test
+  if (_.isEmpty(this.graph[fromNode].edges)) {
+    this.removeNode(fromNode);
+  }
+  if (_.isEmpty(this.graph[toNode].edges)) {
+    this.removeNode(toNode);
   }
 };
 
