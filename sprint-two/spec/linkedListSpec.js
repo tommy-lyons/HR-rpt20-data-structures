@@ -52,4 +52,9 @@ describe('linkedList', function() {
   });
 
   // add more tests here to test the functionality of linkedList
+  it('should return "No value passed in" when addToTail is called without an input value', function() {
+    linkedList.addToTail();
+    expect(linkedList.addToTail()).to.equal('No value passed in');
+  });
 });
+

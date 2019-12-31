@@ -5,6 +5,10 @@ var LinkedList = function() {
 
   list.addToTail = function(value) {
     var node = Node(value);
+    // additional test implementation
+    if (value === undefined) {
+      return 'No value passed in';
+    }
     if (this.head === null) {
       this.head = node;
     }
