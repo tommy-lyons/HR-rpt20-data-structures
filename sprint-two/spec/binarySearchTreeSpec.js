@@ -37,4 +37,17 @@ describe('binarySearchTree', function() {
     binarySearchTree.depthFirstLog(func);
     expect(array).to.eql([5, 2, 3, 7]);
   });
+
+  // additional tests
+
+  it('should accept any non-numerical value and change to a numerical value as input', function() {
+
+    binarySearchTree.cleanValue('2');
+    expect(binarySearchTree.cleanValue('2')).to.equal(2);
+
+    binarySearchTree.insert('2');
+    binarySearchTree.insert('2,000');
+    expect(binarySearchTree.contains('2')).to.equal(true);
+    expect(binarySearchTree.contains('2000')).to.equal(true);
+  });
 });
