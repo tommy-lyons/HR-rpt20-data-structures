@@ -41,4 +41,24 @@ describe('tree', function() {
     expect(tree.contains(8)).to.equal(true);
   });
 
+  // additional test
+  it('should work for all primitive data types and variables passed in as the value', function() {
+    var testStr = 'string';
+    var testArr = [1, 2, 3, 4, 5];
+    var testObj = {name: 'testObj'};
+
+    tree.addChild(true);
+    tree.addChild('string');
+    tree.addChild(null);
+    tree.addChild(testStr);
+    tree.addChild(testArr);
+    tree.addChild(testObj);
+    expect(tree.contains(true)).to.equal(true);
+    expect(tree.contains(null)).to.equal(true);
+    expect(tree.contains('string')).to.equal(true);
+    expect(tree.contains(testStr)).to.eql(true);
+    expect(tree.contains(testArr)).to.eql(true);
+    expect(tree.contains(testObj)).to.eql(true);
+  });
+
 });
