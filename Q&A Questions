@@ -1,0 +1,21 @@
+
+
+In regards to the hash table problem - not the video -
+  we're wondering where on the has table object the passed in values are stored. They get pushed to the
+  storage array that is initialized as part of the pseudoclassical constructor function, but when we look at the
+  instantiation of the HashTable object in the console after running the code, it's not apparent where the array actually exists.
+  It's on the prototype, correct? How can you look at it?
+
+
+
+
+
+
+What is the actual definition of a tuple? In this lecture / project we talk about a key:value pair as it's own
+standalone array as a tuple, but the array of key value pairs is defined as a tuple as well?
+
+How does the JS hashing function stack up next to encryption hash functions,
+or say the hash functions used in blockchain ledgers?
+
+How does the has table know which key to go to when it encounters a collision after hashing the key input?
+

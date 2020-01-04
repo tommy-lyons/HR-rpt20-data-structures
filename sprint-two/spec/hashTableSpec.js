@@ -47,6 +47,12 @@ describe('hashTable', function() {
     window.getIndexBelowMaxForKey = oldHashFunction;
   });
 
+  // additional test added
+  it('should not insert any data if no value is passed in with the key', function() {
+    hashTable.insert('TestKey');
+    expect(hashTable.insert('TestKey')).to.equal('You forgot to pass in a value argument');
+  });
+
   // (Advanced! Remove the extra "x" when you want the following tests to run)
   xit ('should double in size when needed', function() {
     _.each(people, function(person) {
